@@ -1,0 +1,2 @@
+# bash onliner to reattach abduco session chosen via dmenu
+abduco -a $(echo "$(abduco | sed -r 's/Active sessions.*//g;s/\*.*//g;s/\t/ /g' | dmenu)" | sed 's/.* //g')
